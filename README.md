@@ -206,11 +206,11 @@ Doing this kind of old-code refactoring in its own commit is an excellent idea.
 
 We'll be using `CheckStyle` as one tool to automatically scan our Java projects for style issues.
 
-- [ ] The project includes a file called `mystyle.xml`. The project _should_ already be configured to use it,
+- [x] The project includes a file called `mystyle.xml`. The project _should_ already be configured to use it,
   but if not, you can go into the IntelliJ settings, go to `Tools -> CheckStyle` and add `mystyle.xml` as a
   new configuration file. For the description, you can call it anything you want, such as `CSC207 Checks`.
 
-- [ ] For each Java source file in `src/main/java/`, fix all CheckStyle issues that are detected.
+- [x] For each Java source file in `src/main/java/`, fix all CheckStyle issues that are detected.
   You should either see the CheckStyle Tool Window icon (it looks like a pencil) on the left of IntelliJ or
   you may need to go to `View -> Tool Windows -> CheckStyle` to open the CheckStyle Tool Window. See the
   following which talks more about this step.
@@ -255,7 +255,7 @@ Tips:
 
 ### **Important: Add, commit, and push your changes.**
 
-- [ ] When you are done, commit your work with a commit message that includes the string "Task 1.1".
+- [x] When you are done, commit your work with a commit message that includes the string "Task 1.1".
 
 **Important: we'll be looking for the string "Task 1.1" in your git log of commit messages!
 
