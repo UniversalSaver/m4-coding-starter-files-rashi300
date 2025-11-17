@@ -1,4 +1,5 @@
-ef3bcf9 (HEAD -> master, origin/master) Extracted method from getAmount. Completed Task 2.1.
+ae0fd4c (HEAD -> master, origin/master) Extracted method from statement. Completed Task 2.2.
+7fb69cf (ammendment) Extracted method from getAmount. Completed Task 2.1.
 09686e9 Added git log, Completed Task 1.2.
 b633f17 Refactored checkstyle and SonarQube errors. Completed Task 1.1.
 11db82f Initial commit
