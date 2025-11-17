@@ -1,2 +1,3 @@
-b633f17 (HEAD -> master) Refactored checkstyle and SonarQube errors. Completed Task 1.1.
-11db82f (origin/master) Initial commit
+09686e9 (HEAD -> master, origin/master) Added git log, Completed Task 1.2.
+b633f17 Refactored checkstyle and SonarQube errors. Completed Task 1.1.
+11db82f Initial commit

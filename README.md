@@ -269,14 +269,14 @@ As highlighted already, the emphasis in this assignment is on the process of per
 refactoring. To document this process, you will also maintain a record of your git log in your
 repository.
 
-- [ ] Run the command `git log --since 2024-09-30 --oneline` in the terminal and copy+paste the output
+- [x] Run the command `git log --since 2024-09-30 --oneline` in the terminal and copy+paste the output
   into the `week4git/log.txt` file to replace all of its contents.
   - Alternatively, make sure your terminal is open in your week3git directory and you can run
     `git log --since 2024-09-30 --oneline > log.txt` to replace the contents of the log.txt file with the log output.
 
 **Important**: do this each time you are asked to commit your work in the remaining tasks.
 
-- [ ] Commit your changes to `log.txt` now; include the string "Task 1.2" in your commit message. 
+- [x] Commit your changes to `log.txt` now; include the string "Task 1.2" in your commit message. 
 
 Note: this commit won't include the updated log with the most recent commit, which is fine. The next
 time we ask you to commit, you'll update your `log.txt` file again and commit the updated log.
