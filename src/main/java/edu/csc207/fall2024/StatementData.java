@@ -21,8 +21,8 @@ public class StatementData {
         result = new ArrayList<>();
 
         for (Performance performance : invoice.getPerformances()) {
-            final AbstractPerformanceCalculator performanceCalculator =
-                    new AbstractPerformanceCalculator(performance, plays.get(performance.getPlayID()));
+            final AbstractPerformanceCalculator performanceCalculator = AbstractPerformanceCalculator
+                    .createPerformanceCalculator(performance, plays.get(performance.getPlayID()));
 
             result.add(new PerformanceData(performance, plays.get(performance.getPlayID()),
                     performanceCalculator.amountFor(), performanceCalculator.volumeCredits()));
