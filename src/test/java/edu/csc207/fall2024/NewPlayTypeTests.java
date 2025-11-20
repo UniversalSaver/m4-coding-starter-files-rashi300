@@ -21,8 +21,8 @@ public class NewPlayTypeTests {
                     .readAllBytes());
         }
         catch (IOException exception) {
-                fail("resource file could not be loaded prior to test executing");
-            }
+            fail("resource file could not be loaded prior to test executing");
+        }
         return "";
     }
 
@@ -57,7 +57,11 @@ public class NewPlayTypeTests {
             StatementPrinter statementPrinter = new StatementPrinter(invoice, plays);
             String result = statementPrinter.statement();
 
-            assertEquals(result, expected, String.format("Actual output:%n%s%nExpected:%s", result, expected));
+            // ensure consistent line endings are being used
+            result = result.replace("\r\n", "\n");
+            expected = expected.replace("\r\n", "\n");
+
+            assertEquals(String.format("Actual output:%n%s%nExpected:%s", result, expected), expected, result);
         }
     }
 }

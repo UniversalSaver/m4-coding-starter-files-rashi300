@@ -15,13 +15,20 @@ public abstract class AbstractPerformanceCalculator {
     }
 
     static AbstractPerformanceCalculator createPerformanceCalculator(Performance performance, Play play) {
-        if (play.getType().equals("tragedy")) {
-            return new TragedyCalculator(performance);
+
+        switch (play.getType()) {
+            case "tragedy":
+                return new TragedyCalculator(performance);
+            case "comedy":
+                return new ComedyCalculator(performance);
+            case "pastoral":
+                return new PastoralCalculator(performance);
+            case "history":
+                return new HistoryCalculator(performance);
+            default:
+                throw new PerformanceData.UnexpectedPlayTypeException(
+                        String.format("unknown type: %s", play.getType()));
         }
-        else if (play.getType().equals("comedy")) {
-            return new ComedyCalculator(performance);
-        }
-        throw new PerformanceData.UnexpectedPlayTypeException(String.format("unknown type: %s", play.getType()));
     }
 
     /**
