@@ -1,4 +1,4 @@
-package edu.csc207.fall2024;
+package theater;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -11,26 +11,27 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 
-public class NewPlayTypeTests {
+public class StatementPrinterTests {
 
     private static String loadString(String path) {
         try {
-            return new String(Objects.requireNonNull(NewPlayTypeTests.class
+            return new String(Objects.requireNonNull(StatementPrinterTests.class
                             .getClassLoader()
                             .getResourceAsStream(path))
                     .readAllBytes());
         }
         catch (IOException exception) {
-            fail("resource file could not be loaded prior to test executing");
-        }
+                fail("resource file could not be loaded prior to test executing");
+            }
         return "";
     }
 
     @Test
-    public void statementWithNewPlayTypesTest() {
-        String expected = loadString("ExampleStatementWithNewPlays.txt");
+    public void exampleStatementTest() {
 
-        JSONObject a = new JSONObject(loadString("new_plays.json"));
+        String expected = loadString("ExampleStatement.txt");
+
+        JSONObject a = new JSONObject(loadString("plays.json"));
 
         Map<String, Play> plays = new HashMap<>();
 
@@ -39,7 +40,7 @@ public class NewPlayTypeTests {
             plays.put(s, new Play(play.getString("name"), play.getString("type")));
         }
 
-        JSONArray ja = new JSONArray(loadString("new_invoices.json"));
+        JSONArray ja = new JSONArray(loadString("invoices.json"));
 
         for (Object jo : ja) {
             JSONObject jinvoice = (JSONObject) jo;
@@ -57,11 +58,8 @@ public class NewPlayTypeTests {
             StatementPrinter statementPrinter = new StatementPrinter(invoice, plays);
             String result = statementPrinter.statement();
 
-            // ensure consistent line endings are being used
-            result = result.replace("\r\n", "\n");
-            expected = expected.replace("\r\n", "\n");
-
             assertEquals(String.format("Actual output:%n%s%nExpected:%s", result, expected), expected, result);
         }
+
     }
 }

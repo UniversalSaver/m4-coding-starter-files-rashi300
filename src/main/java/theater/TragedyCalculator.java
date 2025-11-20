@@ -1,4 +1,4 @@
-package edu.csc207.fall2024;
+package theater;
 
 /**
  * A calculator for tragedy plays.
