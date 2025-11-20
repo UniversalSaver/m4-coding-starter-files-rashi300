@@ -1,11 +1,4 @@
-d8cd953 (HEAD -> master, origin/master) Quick fix to tests. Added new play calculators. Completed Task 5.
-0ed4241 Refactored AbstractPerformanceCalculator to use ComedyCalculator and TragedyCalculator. Completed Task 4.3.
-7a15914 Refactored PerformanceData to make all calculations happen in AbstractPerformanceCalculator. Completed Task 4.2.
-f40cd56 Created AbstractPerformanceCalculator. Refactored PerformanceData to have a Play instead of Map<String, Play>. Completed Task 4.1.
-97ab025 Created HTMLStatementPrinter class, and it works properly. Completed Task 3.2.
-32f7c3c Refactored StatementPrinter so all work is done in StatementData. Completed Task 3.1.
-59027a2 Split loops in statement method. Completed Task 2.4.
-bf7fcf2 Extracted format from statement. Completed Task 2.3.
+bf7fcf2 (HEAD -> master, origin/master) Extracted format from statement. Completed Task 2.3.
 ae0fd4c Extracted method from statement. Completed Task 2.2.
 7fb69cf (ammendment) Extracted method from getAmount. Completed Task 2.1.
 09686e9 Added git log, Completed Task 1.2.
