@@ -37,8 +37,11 @@ public class StatementPrinter {
         return result.toString();
     }
 
-    private static String usd(int totalAmount) {
+    static String usd(int totalAmount) {
         return NumberFormat.getCurrencyInstance(Locale.US).format(totalAmount / Constants.PERCENT_FACTOR);
     }
 
+    StatementData getStatementData() {
+        return statementData;
+    }
 }
