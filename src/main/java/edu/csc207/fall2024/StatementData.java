@@ -13,12 +13,20 @@ public class StatementData {
 
     public StatementData(Invoice invoice, Map<String, Play> plays) {
         this.invoice = invoice;
-        performanceDataList = new ArrayList<>();
+        performanceDataList = createPerformanceData(plays);
+    }
+
+    private List<PerformanceData> createPerformanceData(Map<String, Play> plays) {
+        final List<PerformanceData> result;
+        result = new ArrayList<>();
 
         for (Performance performance : invoice.getPerformances()) {
+            final AbstractPerformanceCalculator performanceCalculator =
+                    new AbstractPerformanceCalculator(performance, plays.get(performance.getPlayID()));
 
-            performanceDataList.add(new PerformanceData(performance, plays));
+            result.add(new PerformanceData(performance, plays.get(performance.getPlayID())));
         }
+        return result;
     }
 
     public String getCustomer() {

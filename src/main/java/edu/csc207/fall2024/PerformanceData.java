@@ -1,17 +1,15 @@
 package edu.csc207.fall2024;
 
-import java.util.Map;
-
 /**
  * A class representing performance data.
  */
 public class PerformanceData {
     private final Performance performance;
-    private final Map<String, Play> plays;
+    private final Play play;
 
-    public PerformanceData(Performance performance, Map<String, Play> plays) {
+    public PerformanceData(Performance performance, Play play) {
         this.performance = performance;
-        this.plays = plays;
+        this.play = play;
     }
 
     public int getAudience() {
@@ -19,11 +17,11 @@ public class PerformanceData {
     }
 
     public String getType() {
-        return plays.get(performance.getPlayID()).getType();
+        return play.getType();
     }
 
     public String getName() {
-        return plays.get(performance.getPlayID()).getName();
+        return play.getName();
     }
 
     /**
