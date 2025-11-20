@@ -1,4 +1,5 @@
-bf7fcf2 (HEAD -> master, origin/master) Extracted format from statement. Completed Task 2.3.
+59027a2 (HEAD -> master, origin/master) Split loops in statement method. Completed Task 2.4.
+bf7fcf2 Extracted format from statement. Completed Task 2.3.
 ae0fd4c Extracted method from statement. Completed Task 2.2.
 7fb69cf (ammendment) Extracted method from getAmount. Completed Task 2.1.
 09686e9 Added git log, Completed Task 1.2.
