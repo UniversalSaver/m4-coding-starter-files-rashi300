@@ -24,7 +24,8 @@ public class StatementData {
             final AbstractPerformanceCalculator performanceCalculator =
                     new AbstractPerformanceCalculator(performance, plays.get(performance.getPlayID()));
 
-            result.add(new PerformanceData(performance, plays.get(performance.getPlayID())));
+            result.add(new PerformanceData(performance, plays.get(performance.getPlayID()),
+                    performanceCalculator.amountFor(), performanceCalculator.volumeCredits()));
         }
         return result;
     }
@@ -45,7 +46,7 @@ public class StatementData {
         int result = 0;
         for (PerformanceData performanceData : getPerformances()) {
             // print line for this order
-            result += performanceData.amountFor();
+            result += performanceData.getAmount();
         }
         return result;
     }
@@ -59,7 +60,7 @@ public class StatementData {
         for (PerformanceData performanceData : getPerformances()) {
 
             // add volume credits
-            result += performanceData.volumeCredits();
+            result += performanceData.getVolumeCredits();
 
         }
         return result;

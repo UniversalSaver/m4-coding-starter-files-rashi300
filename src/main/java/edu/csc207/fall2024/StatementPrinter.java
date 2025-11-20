@@ -28,7 +28,7 @@ public class StatementPrinter {
         final StringBuilder result = new StringBuilder("Statement for " + statementData.getCustomer() + "\n");
         for (PerformanceData performanceData : statementData.getPerformances()) {
             result.append(String.format("  %s: %s (%s seats)%n",
-                    performanceData.getName(), usd(performanceData.amountFor()),
+                    performanceData.getName(), usd(performanceData.getAmount()),
                     performanceData.getAudience()));
         }
 
