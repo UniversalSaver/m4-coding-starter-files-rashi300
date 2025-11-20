@@ -1,4 +1,5 @@
-0ed4241 (HEAD -> master, origin/master) Refactored AbstractPerformanceCalculator to use ComedyCalculator and TragedyCalculator. Completed Task 4.3.
+d8cd953 (HEAD -> master, origin/master) Quick fix to tests. Added new play calculators. Completed Task 5.
+0ed4241 Refactored AbstractPerformanceCalculator to use ComedyCalculator and TragedyCalculator. Completed Task 4.3.
 7a15914 Refactored PerformanceData to make all calculations happen in AbstractPerformanceCalculator. Completed Task 4.2.
 f40cd56 Created AbstractPerformanceCalculator. Refactored PerformanceData to have a Play instead of Map<String, Play>. Completed Task 4.1.
 97ab025 Created HTMLStatementPrinter class, and it works properly. Completed Task 3.2.
